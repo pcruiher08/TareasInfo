@@ -1,0 +1,85 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bankaccounts;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.*;
+
+/**
+ *
+ * @author Pablo
+ */
+public class BankAccount {
+    double saldo; 
+    String nombrePersona; 
+    String numCliente; 
+    Calendar fechaApertura; 
+    
+void BankAccount(){
+saldo=0;
+nombrePersona="";
+numCliente="";
+fechaApertura=null;
+}
+void BankAccount(double saldo, String nombrePersona, String numCliente){
+saldo=this.saldo;
+nombrePersona= this.nombrePersona; 
+numCliente=this.numCliente;
+fechaApertura=Calendar.getInstance();
+}
+@Override
+public String toString(){
+       Date dia = fechaApertura.getTime();
+String x ="Nombre: "+nombrePersona+"\n"+"Num. Cliente: "+numCliente+"\n"+"Saldo: "+saldo+"\n" + "Fecha de Apertura: "+dia;
+return (x);
+}
+
+int depositAmount(double monto) throws IOException{
+if(Double.isInfinite(monto)&&Double.MAX_VALUE<=monto)
+throw new IOException ("monto es muy grande");
+else
+return(int) (saldo+=monto);
+}
+void withdrawAmount(double monto)throws IOException{
+if(saldo-monto<0)
+throw new IOException("monto es muy grande");
+else
+    saldo-=monto;
+}
+
+void getSaldo(){System.out.println("Saldo: "+saldo);}
+
+void getNombrePersona(){System.out.println("Nombre Persona: "+nombrePersona);}
+
+void getNumCliente(){System.out.println("Num. Cliente: "+numCliente);}
+
+void getFechaApertura(){System.out.println("Fecha de apertura"+fechaApertura);}
+
+void setSaldo(int t){saldo=t;}
+
+void setNombrePersona(String Nombre){nombrePersona=Nombre;}
+
+void setNumCliente(String num){ numCliente=num;}
+
+void setFechaApertura(){}//terminar este
+
+int saveAccount(String nombreArchivo){
+      PrintWriter outputStream = null;
+      try{
+      outputStream = new PrintWriter (nombreArchivo);
+      }
+      catch(FileNotFoundException e){
+      
+      }
+      outputStream.println("");
+      outputStream.close();
+    return 0;
+}
+
+}
+
