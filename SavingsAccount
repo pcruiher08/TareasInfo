@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bankaccounts;
+
+import java.util.Date;
+
+/**
+ *
+ * @author Pablo
+ */
+
+
+public class SavingsAccount extends BankAccount {
+    double interestRate;
+    
+    
+SavingsAccount(){
+super();
+}
+
+SavingsAccount(double valor){
+    super();
+interestRate=valor;
+}
+
+    @Override
+    public String toString(){
+        Date dia = fechaApertura.getTime();
+String x ="Nombre: "+nombrePersona+"\n"+"Num. Cliente: "+numCliente+"\n"+"Saldo: "+saldo+"\n" +"interestRate: "+interestRate + "\n"+"Fecha de Apertura: "+dia;
+return (x);
+
+}
+    @Override
+    int saveAccount(String nombreArchivo){
+    return 0;
+    }
+    
+    @Override
+    int saveSerialAccount(String nombreArchivo){
+    return 0;
+    }
+
+}
