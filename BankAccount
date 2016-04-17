@@ -40,15 +40,15 @@ return (x);
 }
 
 int depositAmount(double monto) throws IOException{
-if(Double.isInfinite(monto)&&Double.MAX_VALUE<=monto)
-throw new IOException ("monto es muy grande");
-else
-return(int) (saldo+=monto);
+    if(Double.isInfinite(monto)&&Double.MAX_VALUE<=monto)
+    throw new IOException ("monto es muy grande");
+    else
+    return(int) (saldo+=monto);
 }
 void withdrawAmount(double monto)throws IOException{
-if(saldo-monto<0)
-throw new IOException("monto es muy grande");
-else
+    if(saldo-monto<0)
+    throw new IOException("monto es muy grande");
+    else
     saldo-=monto;
 }
 
@@ -68,6 +68,8 @@ void setNumCliente(String num){ numCliente=num;}
 
 void setFechaApertura(){}//terminar este
 
+
+//ultimos dos metodos de guardar en archivos
 int saveAccount(String nombreArchivo){
       PrintWriter outputStream = null;
       try{
@@ -80,6 +82,11 @@ int saveAccount(String nombreArchivo){
       outputStream.close();
     return 0;
 }
+int saveSerialAccount(String nombreArchivo){
+return 0;
+}
 
 }
+
+
 
