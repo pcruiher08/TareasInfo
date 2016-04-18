@@ -26,9 +26,9 @@ numCliente="";
 fechaApertura=null;
 }
 void BankAccount(double saldo, String nombrePersona, String numCliente){
-saldo=this.saldo;
-nombrePersona= this.nombrePersona; 
-numCliente=this.numCliente;
+this.saldo=saldo;
+this.nombrePersona= nombrePersona; 
+this.numCliente=numCliente;
 fechaApertura=Calendar.getInstance();
 }
 @Override
@@ -59,13 +59,13 @@ void getNumCliente(){System.out.println("Num. Cliente: "+numCliente);}
 
 void getFechaApertura(){System.out.println("Fecha de apertura"+fechaApertura);}
 
-void setSaldo(int t){saldo=t;}
+void setSaldo(int t){this.saldo=t;}
 
-void setNombrePersona(String Nombre){nombrePersona=Nombre;}
+void setNombrePersona(String Nombre){this.nombrePersona=Nombre;}
 
-void setNumCliente(String num){ numCliente=num;}
+void setNumCliente(String num){ this.numCliente=num;}
 
-void setFechaApertura(){}//terminar este
+void setFechaApertura(Calendar fechaApertura){this.fechaApertura=fechaApertura;}//terminar este
 
 
 //ultimos dos metodos de guardar en archivos
@@ -101,3 +101,4 @@ return 0;
 }
 
 }
+
