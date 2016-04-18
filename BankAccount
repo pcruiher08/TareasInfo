@@ -92,7 +92,6 @@ int saveSerialAccount(String nombreArchivo) throws FileNotFoundException, IOExce
    fileOut.close();
     }
    catch(IOException i){
-      
            i.printStackTrace();
             return -1;
            }
@@ -100,5 +99,8 @@ int saveSerialAccount(String nombreArchivo) throws FileNotFoundException, IOExce
 return 0;
 }
 
-}
+    void SavingsAccount(int i, String string, String string0, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
+}
