@@ -1,0 +1,21 @@
+package bankaccounts;
+/**
+ *
+ * @author Pablo
+ */
+
+public class BankAccounts {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        BankAccount[] cuentasBanamex = new BankAccount[2];
+      cuentasBanamex[0].SavingsAccount((int)100.50,"Javier Hernandez","14", (int)15.10);
+      //double saldo, String nombrePersona, String numCliente, double valor
+       // cuentasBanamex[0].BankAccount(100.50, "Javier", "14");
+       
+       //SavingsAccount cuentasBanamex[0] = new SavingsAccount();
+    }
+    
+}
