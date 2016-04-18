@@ -38,11 +38,11 @@ String x ="Nombre: "+nombrePersona+"\n"+"Num. Cliente: "+numCliente+"\n"+"Saldo:
 return (x);
 }
 
-int depositAmount(double monto) throws IOException{
+void depositAmount(double monto) throws IOException{
     if(Double.isInfinite(monto)&&Double.MAX_VALUE<=monto)
     throw new IOException ("monto es muy grande");
     else
-    return(int) (saldo+=monto);
+    saldo+=monto;
 }
 void withdrawAmount(double monto)throws IOException{
     if(saldo-monto<0)
